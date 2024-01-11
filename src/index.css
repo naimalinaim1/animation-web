@@ -18,10 +18,6 @@
   color: var(--primary-color);
 }
 
-.primary-bg {
-  background-color: var(--primary-color);
-}
-
 .secondary-color {
   color: var(--secondary-color);
 }

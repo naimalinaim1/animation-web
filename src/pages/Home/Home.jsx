@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "./section/Hero/Hero";
 import Services from "./section/Services/Services";
 import TrustBar from "./section/TrustBar/TrustBar";
+import WorkArea from "./section/WorkArea/WorkArea";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Services />
       <TrustBar />
+      <WorkArea />
     </div>
   );
 };

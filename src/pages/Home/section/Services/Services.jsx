@@ -5,6 +5,7 @@ import img2 from "../../../../assets/services-icon/2.png";
 import img3 from "../../../../assets/services-icon/3.png";
 import img4 from "../../../../assets/services-icon/4.png";
 import Service from "./Service";
+import SubTitle from "../../../../components/SubTitle";
 
 const Services = () => {
   const services = [
@@ -39,18 +40,16 @@ const Services = () => {
   ];
 
   return (
-    <section className="mt-20">
+    <section className="mt-52">
       {/* service title */}
-      <div>
-        <div className="text-center">
-          <MainTitle>Our Services</MainTitle>
-          <h1 className="text-2xl mt-2">
-            Crafting professional videos for discerning professionals.
-          </h1>
-        </div>
+      <div className="text-center">
+        <MainTitle>Our Services</MainTitle>
+        <SubTitle>
+          Crafting professional videos for discerning professionals.
+        </SubTitle>
       </div>
       {/* service items */}
-      <div className="grid grid-cols-2 mt-12 gap-x-6 gap-y-12">
+      <div className="grid grid-cols-2 mt-20 gap-x-6 gap-y-12">
         {services.map((service) => (
           <Service key={service.id} service={service} />
         ))}

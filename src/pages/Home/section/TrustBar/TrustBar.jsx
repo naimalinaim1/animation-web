@@ -22,8 +22,8 @@ const TrustBar = () => {
   return (
     <section className="my-52">
       <div className="text-center">
-        <MainTitle>They trust our creative works</MainTitle>
-        <SubTitle>Trusted by 4000+ clients</SubTitle>
+        <MainTitle>Trusted by 4000+ clients</MainTitle>
+        <SubTitle>They trust our creative works</SubTitle>
       </div>
       <div className="mt-24">
         <Swiper

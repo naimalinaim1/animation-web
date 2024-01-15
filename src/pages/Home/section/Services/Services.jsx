@@ -6,6 +6,7 @@ import img3 from "../../../../assets/services-icon/3.png";
 import img4 from "../../../../assets/services-icon/4.png";
 import Service from "./Service";
 import SubTitle from "../../../../components/SubTitle";
+import Button from "../../../../components/Button";
 
 const Services = () => {
   const services = [
@@ -47,6 +48,9 @@ const Services = () => {
         <SubTitle>
           Crafting professional videos for discerning professionals.
         </SubTitle>
+        <div className="mt-6">
+          <Button>Pricing</Button>
+        </div>
       </div>
       {/* service items */}
       <div className="grid grid-cols-2 mt-20 gap-x-6 gap-y-12">

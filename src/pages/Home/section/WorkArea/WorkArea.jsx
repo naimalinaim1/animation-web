@@ -8,6 +8,7 @@ import img4 from "../../../../assets/work-img/4.webp";
 import img5 from "../../../../assets/work-img/5.webp";
 import img6 from "../../../../assets/work-img/6.webp";
 import Work from "./Work";
+import Button from "../../../../components/Button";
 
 const WorkArea = () => {
   const ourWorks = [
@@ -25,10 +26,13 @@ const WorkArea = () => {
   ];
 
   return (
-    <section className="my-52">
+    <section className="my-52 bg-[#FFF9F7] py-4 px-1">
       <div className="text-center">
-        <MainTitle>Years of experience and dedication</MainTitle>
-        <SubTitle>Our Works</SubTitle>
+        <MainTitle>Our Works</MainTitle>
+        <SubTitle>Years of experience and dedication</SubTitle>
+        <div className="mt-6">
+          <Button>Pricing</Button>
+        </div>
       </div>
       {/* single work */}
       <div className="mt-24 grid grid-cols-2 gap-16">

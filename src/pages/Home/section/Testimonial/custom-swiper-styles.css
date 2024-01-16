@@ -1,0 +1,14 @@
+/* custom-swiper-styles.css */
+.swiper.swiper-coverflow.swiper-3d {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.swiper-pagination-bullet {
+  background-color: #ff9344; /* Set the desired color */
+  width: 12px; /* Set the width of the bullet */
+  height: 12px; /* Set the height of the bullet */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff9344; /* Set the desired color for the active bullet */
+}

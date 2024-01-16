@@ -1,18 +1,39 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+// Import custom styles
+import "./custom-swiper-styles.css";
+
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import MainTitle from "../../../../components/MainTitle";
 import SubTitle from "../../../../components/SubTitle";
 import Button from "../../../../components/Button";
 
+import { useState } from "react";
+
 const Testimonial = () => {
+  const [swiper, setSwiper] = useState(null);
+
+  // Function to pause Swiper autoplay
+  const handleMouseEnter = () => {
+    if (swiper && swiper.autoplay && swiper.autoplay.running) {
+      swiper.autoplay.stop();
+    }
+  };
+
+  // Function to resume Swiper autoplay
+  const handleMouseLeave = () => {
+    if (swiper && swiper.autoplay && !swiper.autoplay.running) {
+      swiper.autoplay.start();
+    }
+  };
+
   const testimonials = [
     {
       id: 1,
@@ -88,14 +109,20 @@ const Testimonial = () => {
             modifier: 2,
             slideShadows: false,
           }}
+          autoplay={{ delay: 3000 }}
           pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          initialSlide={3}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          initialSlide={0}
           loop={true}
+          onSwiper={setSwiper}
           className="mySwiper select-none"
         >
           {testimonials.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide
+              key={item.id}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <div
                 className="card bg-[#1A2233]"
                 style={{ boxShadow: "1px 2px 2px 2px #ff9344" }}

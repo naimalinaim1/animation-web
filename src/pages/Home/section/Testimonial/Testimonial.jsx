@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import MainTitle from "../../../../components/MainTitle";
 import SubTitle from "../../../../components/SubTitle";
+import Button from "../../../../components/Button";
 
 const Testimonial = () => {
   const testimonials = [
@@ -70,6 +71,9 @@ const Testimonial = () => {
         <SubTitle>
           Collaborate with us for an easy, exciting, and beneficial experience.
         </SubTitle>
+        <div className="mt-6">
+          <Button>Schedule A Call</Button>
+        </div>
       </div>
       <div className="mt-20 ">
         <Swiper

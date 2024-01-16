@@ -6,6 +6,7 @@ import TrustBar from "./section/TrustBar/TrustBar";
 import WorkArea from "./section/WorkArea/WorkArea";
 import GetStarted from "./section/GetStarted/GetStarted";
 import Testimonial from "./section/Testimonial/Testimonial";
+import Discussion from "./section/Discussion/Discussion";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <WorkArea />
       <GetStarted />
       <Testimonial />
+      <Discussion />
     </div>
   );
 };

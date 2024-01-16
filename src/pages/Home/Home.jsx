@@ -5,6 +5,7 @@ import Services from "./section/Services/Services";
 import TrustBar from "./section/TrustBar/TrustBar";
 import WorkArea from "./section/WorkArea/WorkArea";
 import GetStarted from "./section/GetStarted/GetStarted";
+import Testimonial from "./section/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <TrustBar />
       <WorkArea />
       <GetStarted />
+      <Testimonial />
     </div>
   );
 };

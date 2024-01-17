@@ -9,6 +9,7 @@ import Testimonial from "./section/Testimonial/Testimonial";
 import Discussion from "./section/Discussion/Discussion";
 import WhyNeedVideo from "./section/WhyNeedVideo/WhyNeedVideo";
 import FaqSection from "./section/FaqSection/FaqSection";
+import Team from "./section/Team/Team";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Discussion />
       <WhyNeedVideo />
       <FaqSection />
+      <Team />
     </div>
   );
 };

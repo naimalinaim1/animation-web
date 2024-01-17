@@ -8,6 +8,7 @@ import GetStarted from "./section/GetStarted/GetStarted";
 import Testimonial from "./section/Testimonial/Testimonial";
 import Discussion from "./section/Discussion/Discussion";
 import WhyNeedVideo from "./section/WhyNeedVideo/WhyNeedVideo";
+import FaqSection from "./section/FaqSection/FaqSection";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Testimonial />
       <Discussion />
       <WhyNeedVideo />
+      <FaqSection />
     </div>
   );
 };

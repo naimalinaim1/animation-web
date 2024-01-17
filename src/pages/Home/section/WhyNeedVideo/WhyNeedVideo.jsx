@@ -3,7 +3,6 @@ import MainTitle from "../../../../components/MainTitle";
 import SubTitle from "../../../../components/SubTitle";
 
 const WhyNeedVideo = () => {
-  // bg-[#1A2233] text-white py-20
   return (
     <section className="mt-52">
       <div className="text-center">

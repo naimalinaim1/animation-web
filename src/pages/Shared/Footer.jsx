@@ -1,8 +1,9 @@
 import image from "../../assets/footer-logo.png";
 const Footer = () => {
   return (
-    <footer className="bg-[#1A2233]">
-      <div className="w-full max-w-7xl mx-auto  py-28">
+    <footer className="bg-[#1A2233] border-t-8 border-[#ff9344]">
+      {/* footer link */}
+      <div className="w-full max-w-7xl mx-auto py-36">
         <div className="grid grid-cols-4 text-gray-300">
           {/* logo and social link */}
           <aside>
@@ -62,6 +63,20 @@ const Footer = () => {
               </span>
             </a>
           </nav>
+        </div>
+      </div>
+      {/* copyright section */}
+      <div className="py-14 text-xl w-full max-w-7xl mx-auto flex justify-between text-white">
+        <p>
+          Copyright &copy; -{" "}
+          <span className="primary-color">Animation LLC</span> | All Right
+          Reserved.
+        </p>
+        <div>
+          <p>
+            <span className="primary-color">Terms & Conditions </span> |
+            <span className="primary-color"> Privacy policy</span>
+          </p>
         </div>
       </div>
     </footer>

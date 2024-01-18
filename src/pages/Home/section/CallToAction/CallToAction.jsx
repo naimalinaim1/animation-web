@@ -12,7 +12,7 @@ const CallToAction = () => {
     >
       <div className="grid grid-cols-12 gap-6 items-center">
         <div className="col-span-7">
-          <h1 className="text-6xl font-bold leading-tight">
+          <h1 className="text-6xl font-bold leading-tight animate-text bg-gradient-to-r from-[#1A2233] via-[#FF9243] to-[#FF9243] inline-block text-transparent bg-clip-text">
             Let us tell your story, loud and clear!
           </h1>
           <p className="mt-6 mb-8 text-lg">

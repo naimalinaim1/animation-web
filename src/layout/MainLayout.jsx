@@ -2,6 +2,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../pages/Shared/Header";
+import Footer from "../pages/Shared/Footer";
 
 const MainLayout = () => {
   return (
@@ -12,7 +13,7 @@ const MainLayout = () => {
       <main className="w-full max-w-7xl mx-auto">
         <Outlet />
       </main>
-      <footer>footer</footer>
+      <Footer />
     </>
   );
 };

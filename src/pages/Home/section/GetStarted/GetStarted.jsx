@@ -31,37 +31,39 @@ const GetStarted = () => {
   ];
 
   return (
-    <section className="my-52">
-      <div className="text-center">
-        <MainTitle>Our Process</MainTitle>
-        <SubTitle>Getting started is easy with Animation Web</SubTitle>
-        <div className="mt-6">
-          <Button>Schedule A Call</Button>
-        </div>
-      </div>
-      {/* get started */}
-
-      <div className="grid grid-cols-3 gap-4 mt-28">
-        {data.map((item) => (
-          <div key={item.id} className="card bg-base-100 shadow-2xl">
-            <div className="indicator-item indicator-start">
-              <span className="bg-[#ff9344] text-white text-3xl font-medium py-4 px-7 rounded-full uppercase inline-block">
-                {item.id}
-              </span>
-            </div>
-            <figure className="px-10 pt-10">
-              <img
-                src={item.img}
-                alt={item.title}
-                className="rounded-xl w-20 h-20 shadow-lg"
-              />
-            </figure>
-            <div className="card-body items-center text-center">
-              <h2 className="card-title text-2xl">{item.title}</h2>
-              <p className="text-xl mt-2">{item.description}</p>
-            </div>
+    <section className="my-44">
+      <div className="my_container">
+        {/* title */}
+        <div className="text-center">
+          <MainTitle>Our Process</MainTitle>
+          <SubTitle>Getting started is easy with Animation Web</SubTitle>
+          <div className="mt-6">
+            <Button>Schedule A Call</Button>
           </div>
-        ))}
+        </div>
+        {/* get started */}
+        <div className="grid grid-cols-3 gap-4 mt-28">
+          {data.map((item) => (
+            <div key={item.id} className="card bg-base-100 shadow-2xl">
+              <div className="indicator-item indicator-start">
+                <span className="bg-[#ff9344] text-white text-3xl font-medium py-4 px-7 rounded-full uppercase inline-block">
+                  {item.id}
+                </span>
+              </div>
+              <figure className="px-10 pt-10">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="rounded-xl w-20 h-20 shadow-lg"
+                />
+              </figure>
+              <div className="card-body items-center text-center">
+                <h2 className="card-title text-2xl">{item.title}</h2>
+                <p className="text-xl mt-2">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

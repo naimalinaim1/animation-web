@@ -76,19 +76,22 @@ const FaqSection = () => {
 
   return (
     <section className="mt-52">
-      <div className="text-center">
-        <MainTitle>FAQ_</MainTitle>
-        <SubTitle>
-          We{"’"}ve already answered some of our commonly asked questions.
-        </SubTitle>
-      </div>
-      {/* faq_ */}
-      <div className="mt-20">
-        {/* faq_ item */}
-        <div className="w-2/3 mx-auto">
-          {faqData.map((faqItem) => (
-            <FaqItem key={faqItem.id} faqItem={faqItem} />
-          ))}
+      <div className="my_container">
+        {/* title */}
+        <div className="text-center">
+          <MainTitle>FAQ_</MainTitle>
+          <SubTitle>
+            We{"’"}ve already answered some of our commonly asked questions.
+          </SubTitle>
+        </div>
+        {/* faq_ */}
+        <div className="mt-20">
+          {/* faq_ item */}
+          <div className="w-2/3 mx-auto">
+            {faqData.map((faqItem) => (
+              <FaqItem key={faqItem.id} faqItem={faqItem} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

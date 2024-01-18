@@ -57,25 +57,27 @@ const Discussion = () => {
 
   return (
     <section className="my-48">
-      <div className="text-center">
-        <MainTitle>Why use animated video content on your website?</MainTitle>
-        <SubTitle>
-          <p className="w-4/5 mx-auto">
-            With increased conversions, longer customer retention, and higher
-            click-through rates, the real question is why not choose animated
-            video content?
-          </p>
-        </SubTitle>
-      </div>
-
-      {/* discussion item */}
-      <div className="w-[95%] mx-auto grid grid-cols-3 gap-8 mt-20">
-        {discussionData.map((discussionItem) => (
-          <DiscussionItem
-            key={discussionItem.id}
-            discussionItem={discussionItem}
-          />
-        ))}
+      <div className="my_container">
+        {/* title */}
+        <div className="text-center">
+          <MainTitle>Why use animated video content on your website?</MainTitle>
+          <SubTitle>
+            <p className="w-4/5 mx-auto">
+              With increased conversions, longer customer retention, and higher
+              click-through rates, the real question is why not choose animated
+              video content?
+            </p>
+          </SubTitle>
+        </div>
+        {/* discussion item */}
+        <div className="w-[95%] mx-auto grid grid-cols-3 gap-8 mt-20">
+          {discussionData.map((discussionItem) => (
+            <DiscussionItem
+              key={discussionItem.id}
+              discussionItem={discussionItem}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

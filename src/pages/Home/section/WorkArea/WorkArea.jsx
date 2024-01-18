@@ -26,19 +26,22 @@ const WorkArea = () => {
   ];
 
   return (
-    <section className="my-52 bg-[#FFF9F7] py-4 px-1">
-      <div className="text-center">
-        <MainTitle>Our Works</MainTitle>
-        <SubTitle>Years of experience and dedication</SubTitle>
-        <div className="mt-6">
-          <Button>Pricing</Button>
+    <section className="my-44 bg-[#FFF9F7] py-20 px-1">
+      <div className="my_container ">
+        {/* title */}
+        <div className="text-center">
+          <MainTitle>Our Works</MainTitle>
+          <SubTitle>Years of experience and dedication</SubTitle>
+          <div className="mt-6">
+            <Button>Pricing</Button>
+          </div>
         </div>
-      </div>
-      {/* single work */}
-      <div className="mt-24 grid grid-cols-2 gap-16">
-        {ourWorks.map((work) => (
-          <Work key={work.id} work={work} />
-        ))}
+        {/* single work */}
+        <div className="mt-24 grid grid-cols-2 gap-16">
+          {ourWorks.map((work) => (
+            <Work key={work.id} work={work} />
+          ))}
+        </div>
       </div>
     </section>
   );

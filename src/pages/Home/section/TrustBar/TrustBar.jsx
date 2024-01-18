@@ -21,41 +21,43 @@ import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 const TrustBar = () => {
   return (
     <section className="my-52">
-      <div className="text-center">
-        <MainTitle>Trusted by 4000+ clients</MainTitle>
-        <SubTitle>They trust our creative works</SubTitle>
-      </div>
-      <div className="mt-24">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          freeMode={true}
-          loop={true}
-          autoplay={{
-            delay: 500,
-            disableOnInteraction: false,
-          }}
-          effect="slide"
-          speed={1000}
-          modules={[FreeMode, Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={img1} className="block mx-auto" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img2} className="block mx-auto" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img3} className="block mx-auto" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img4} className="block mx-auto" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img5} className="block mx-auto" alt="" />
-          </SwiperSlide>
-        </Swiper>
+      <div className="my_container">
+        <div className="text-center">
+          <MainTitle>Trusted by 4000+ clients</MainTitle>
+          <SubTitle>They trust our creative works</SubTitle>
+        </div>
+        <div className="mt-24">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            freeMode={true}
+            loop={true}
+            autoplay={{
+              delay: 500,
+              disableOnInteraction: false,
+            }}
+            effect="slide"
+            speed={1000}
+            modules={[FreeMode, Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src={img1} className="block mx-auto" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img2} className="block mx-auto" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img3} className="block mx-auto" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img4} className="block mx-auto" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img5} className="block mx-auto" alt="" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </section>
   );

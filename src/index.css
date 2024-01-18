@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.my_container {
+  @apply w-[96%] max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1500px] mx-auto;
+}
+
 :root {
   --primary-color: #ffad64;
   --secondary-color: #ff9344;

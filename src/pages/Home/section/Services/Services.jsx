@@ -42,21 +42,23 @@ const Services = () => {
 
   return (
     <section className="mt-52">
-      {/* service title */}
-      <div className="text-center">
-        <MainTitle>Our Services</MainTitle>
-        <SubTitle>
-          Crafting professional videos for discerning professionals.
-        </SubTitle>
-        <div className="mt-6">
-          <Button>Pricing</Button>
+      <div className="my_container">
+        {/* service title */}
+        <div className="text-center">
+          <MainTitle>Our Services</MainTitle>
+          <SubTitle>
+            Crafting professional videos for discerning professionals.
+          </SubTitle>
+          <div className="mt-6">
+            <Button>Pricing</Button>
+          </div>
         </div>
-      </div>
-      {/* service items */}
-      <div className="grid grid-cols-2 mt-20 gap-x-6 gap-y-12">
-        {services.map((service) => (
-          <Service key={service.id} service={service} />
-        ))}
+        {/* service items */}
+        <div className="grid grid-cols-2 mt-20 gap-x-6 gap-y-12">
+          {services.map((service) => (
+            <Service key={service.id} service={service} />
+          ))}
+        </div>
       </div>
     </section>
   );

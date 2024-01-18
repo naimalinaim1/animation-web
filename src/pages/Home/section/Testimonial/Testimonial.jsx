@@ -87,65 +87,68 @@ const Testimonial = () => {
 
   return (
     <section className="mt-52 bg-[#1A2233] py-20 text-white">
-      <div className="text-center">
-        <MainTitle>Clients Testimonials</MainTitle>
-        <SubTitle>
-          Collaborate with us for an easy, exciting, and beneficial experience.
-        </SubTitle>
-        <div className="mt-6">
-          <Button>Schedule A Call</Button>
+      <div className="my_container">
+        <div className="text-center">
+          <MainTitle>Clients Testimonials</MainTitle>
+          <SubTitle>
+            Collaborate with us for an easy, exciting, and beneficial
+            experience.
+          </SubTitle>
+          <div className="mt-6">
+            <Button>Schedule A Call</Button>
+          </div>
         </div>
-      </div>
-      <div className="mt-20 ">
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={3}
-          coverflowEffect={{
-            rotate: 10,
-            stretch: 0,
-            depth: 100,
-            modifier: 2,
-            slideShadows: false,
-          }}
-          autoplay={{ delay: 3000 }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-          initialSlide={0}
-          loop={true}
-          onSwiper={setSwiper}
-          className="mySwiper select-none"
-        >
-          {testimonials.map((item) => (
-            <SwiperSlide
-              key={item.id}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div
-                className="card bg-[#1A2233]"
-                style={{ boxShadow: "1px 2px 2px 2px #ff9344" }}
+        <div className="mt-20 ">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={3}
+            coverflowEffect={{
+              rotate: 10,
+              stretch: 0,
+              depth: 100,
+              modifier: 2,
+              slideShadows: false,
+            }}
+            autoplay={{ delay: 3000 }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            initialSlide={0}
+            loop={true}
+            onSwiper={setSwiper}
+            className="mySwiper select-none"
+          >
+            {testimonials.map((item) => (
+              <SwiperSlide
+                key={item.id}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                <figure className="px-10 pt-10">
-                  <img
-                    src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                    alt="Shoes"
-                    className="rounded-full w-44 h-44"
-                  />
-                </figure>
-                <div className="card-body items-center text-center">
-                  <p className="primary-color font-medium">
-                    {item.companyName}
-                  </p>
-                  <h2 className="card-title">{item.name}</h2>
-                  <p className="mt-5  primary-color text-5xl">*****</p>
-                  <p>{item.description}</p>
+                <div
+                  className="card bg-[#1A2233]"
+                  style={{ boxShadow: "1px 2px 2px 2px #ff9344" }}
+                >
+                  <figure className="px-10 pt-10">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                      alt="Shoes"
+                      className="rounded-full w-44 h-44"
+                    />
+                  </figure>
+                  <div className="card-body items-center text-center">
+                    <p className="primary-color font-medium">
+                      {item.companyName}
+                    </p>
+                    <h2 className="card-title">{item.name}</h2>
+                    <p className="mt-5  primary-color text-5xl">*****</p>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

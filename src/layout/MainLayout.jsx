@@ -7,10 +7,8 @@ import Footer from "../pages/Shared/Footer";
 const MainLayout = () => {
   return (
     <>
-      <header>
-        <Header />
-      </header>
-      <main className="w-full max-w-7xl mx-auto">
+      <Header />
+      <main>
         <Outlet />
       </main>
       <Footer />

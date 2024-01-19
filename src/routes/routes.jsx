@@ -5,6 +5,7 @@ import ErrorPage from "./ErrorPage";
 // pages
 import Home from "../pages/Home/Home";
 import Portfolio from "../pages/Portfolio/Portfolio";
+import Process from "../pages/Process/Process";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/portfolio/",
         element: <Portfolio />,
+      },
+      {
+        path: "/video-process/",
+        element: <Process />,
       },
     ],
   },

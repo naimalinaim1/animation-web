@@ -1,16 +1,16 @@
-import MainTitle from "../../../../components/MainTitle";
-import SubTitle from "../../../../components/SubTitle";
+import MainTitle from "../../../components/MainTitle";
+import SubTitle from "../../../components/SubTitle";
 
-import img1 from "../../../../assets/work-img/1.webp";
-import img2 from "../../../../assets/work-img/2.webp";
-import img3 from "../../../../assets/work-img/3.webp";
-import img4 from "../../../../assets/work-img/4.webp";
-import img5 from "../../../../assets/work-img/5.webp";
-import img6 from "../../../../assets/work-img/6.webp";
+import img1 from "../../../assets/work-img/1.webp";
+import img2 from "../../../assets/work-img/2.webp";
+import img3 from "../../../assets/work-img/3.webp";
+import img4 from "../../../assets/work-img/4.webp";
+import img5 from "../../../assets/work-img/5.webp";
+import img6 from "../../../assets/work-img/6.webp";
 import Work from "./Work";
-import Button from "../../../../components/Button";
+import Button from "../../../components/Button";
 
-const WorkArea = () => {
+const OurWork = () => {
   const ourWorks = [
     { id: 1, img: img1, name: "Enrollio", category: "SaaS Explainer Video" },
     {
@@ -47,4 +47,4 @@ const WorkArea = () => {
   );
 };
 
-export default WorkArea;
+export default OurWork;

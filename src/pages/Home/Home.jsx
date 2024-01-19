@@ -3,14 +3,13 @@ import React from "react";
 import Hero from "./section/Hero/Hero";
 import Services from "./section/Services/Services";
 import TrustBar from "./section/TrustBar/TrustBar";
-import OurWork from "../Shared/OurWork/OurWork";
+import OurWork from "./section/OurWork/OurWork";
 import GetStarted from "./section/GetStarted/GetStarted";
 import Testimonial from "./section/Testimonial/Testimonial";
 import Discussion from "./section/Discussion/Discussion";
 import WhyNeedVideo from "./section/WhyNeedVideo/WhyNeedVideo";
 import FaqSection from "./section/FaqSection/FaqSection";
 import Team from "./section/Team/Team";
-import CallToAction from "./section/CallToAction/CallToAction";
 
 const Home = () => {
   return (
@@ -25,7 +24,6 @@ const Home = () => {
       <WhyNeedVideo />
       <FaqSection />
       <Team />
-      <CallToAction />
     </div>
   );
 };

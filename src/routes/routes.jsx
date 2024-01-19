@@ -4,6 +4,7 @@ import MainLayout from "../layout/MainLayout";
 import ErrorPage from "./ErrorPage";
 // pages
 import Home from "../pages/Home/Home";
+import Portfolio from "../pages/Portfolio/Portfolio";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/portfolio/",
+        element: <Portfolio />,
       },
     ],
   },

@@ -1,5 +1,5 @@
-import Button from "../../../../components/Button";
-import image from "../../../../assets/storytellingPowerhouse.gif";
+import Button from "../../../components/Button";
+import image from "../../../assets/storytellingPowerhouse.gif";
 
 const CallToAction = () => {
   return (
@@ -25,7 +25,11 @@ const CallToAction = () => {
           </div>
           {/* second column */}
           <div className="col-span-5 xl:col-span-6 px-10">
-            <img src={image} alt="Story telling power house" />
+            <img
+              className="pb-10"
+              src={image}
+              alt="Story telling power house"
+            />
           </div>
         </div>
       </div>

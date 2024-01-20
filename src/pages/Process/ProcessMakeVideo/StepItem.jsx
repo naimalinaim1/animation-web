@@ -8,7 +8,9 @@ const StepItem = ({ processStep }) => {
         <h2 className="text-4xl font-bold">
           {stepNo} {stepName}
         </h2>
-        <p className="text-lg mt-6">{stepDescription}</p>
+        <p className={`text-lg mt-6 ${stepNo % 2 == 0 && "text-center"}`}>
+          {stepDescription}
+        </p>
       </article>
       <div>
         <img className="max:h-[530px] w-full" src={stepImg} alt={stepName} />

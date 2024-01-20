@@ -62,11 +62,11 @@ const Discussion = () => {
         <div className="text-center">
           <MainTitle>Why use animated video content on your website?</MainTitle>
           <SubTitle>
-            <p className="w-4/5 mx-auto">
+            <span className="block w-4/5 mx-auto">
               With increased conversions, longer customer retention, and higher
               click-through rates, the real question is why not choose animated
               video content?
-            </p>
+            </span>
           </SubTitle>
         </div>
         {/* discussion item */}

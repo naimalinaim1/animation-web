@@ -5,7 +5,7 @@ const SubTitle = ({ children }) => {
 };
 
 SubTitle.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
 };
 
 export default SubTitle;

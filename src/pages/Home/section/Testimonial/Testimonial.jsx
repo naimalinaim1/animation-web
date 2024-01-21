@@ -95,7 +95,7 @@ const Testimonial = () => {
             experience.
           </SubTitle>
           <div className="mt-6">
-            <Button>Schedule A Call</Button>
+            <Button link="/contact-us/">Schedule A Call</Button>
           </div>
         </div>
         <div className="mt-20 ">

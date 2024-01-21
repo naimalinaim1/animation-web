@@ -12,7 +12,7 @@ const OurWork = () => {
           <MainTitle>Our Works</MainTitle>
           <SubTitle>Years of experience and dedication</SubTitle>
           <div className="mt-6">
-            <Button>Pricing</Button>
+            <Button link="/contact-us/">Pricing</Button>
           </div>
         </div>
         {/* single work */}

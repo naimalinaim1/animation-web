@@ -1,0 +1,14 @@
+.my-selected:not([disabled]) {
+  font-weight: bold;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.my-selected:hover:not([disabled]) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+#selectDate:disabled {
+  opacity: 0.5;
+}

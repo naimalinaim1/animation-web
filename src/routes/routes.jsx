@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import Process from "../pages/Process/Process";
 import CaseStudy from "../pages/CaseStudy/CaseStudy";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/case-study/",
         element: <CaseStudy />,
+      },
+      {
+        path: "/contact-us/",
+        element: <ContactUs />,
       },
     ],
   },

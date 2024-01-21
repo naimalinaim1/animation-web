@@ -19,7 +19,7 @@ const Hero = () => {
                 videos that convert effectively.
               </strong>
             </p>
-            <Button>GET IN TOUCH</Button>
+            <Button link="/contact-us/">GET IN TOUCH</Button>
           </div>
           {/* image */}
           <div>

@@ -21,7 +21,7 @@ const CallToAction = () => {
               Don{"'"}t let confusion and lack of understanding hold your
               business back any longer.
             </p>
-            <Button>Schedule A Call</Button>
+            <Button link="/contact-us/">Schedule A Call</Button>
           </div>
           {/* second column */}
           <div className="col-span-5 xl:col-span-6 px-10">

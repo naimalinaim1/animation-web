@@ -39,7 +39,7 @@ const WhyNeedVideo = () => {
           </div>
           {/* button */}
           <div className="mt-16 text-center">
-            <Button>Get Yor Video Now</Button>
+            <Button link="/contact-us/">Get Yor Video Now</Button>
           </div>
         </div>
       </div>

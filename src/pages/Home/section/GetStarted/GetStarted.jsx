@@ -38,7 +38,7 @@ const GetStarted = () => {
           <MainTitle>Our Process</MainTitle>
           <SubTitle>Getting started is easy with Animation Web</SubTitle>
           <div className="mt-6">
-            <Button>Schedule A Call</Button>
+            <Button link="/contact-us/">Schedule A Call</Button>
           </div>
         </div>
         {/* get started */}

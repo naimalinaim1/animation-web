@@ -50,7 +50,7 @@ const Services = () => {
             Crafting professional videos for discerning professionals.
           </SubTitle>
           <div className="mt-6">
-            <Button>Pricing</Button>
+            <Button link="/contact-us/">Pricing</Button>
           </div>
         </div>
         {/* service items */}

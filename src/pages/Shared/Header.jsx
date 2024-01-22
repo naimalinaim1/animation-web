@@ -19,7 +19,7 @@ const Header = () => {
   );
 
   return (
-    <div className="my_container navbar py-4 px-0 my-6">
+    <header className="my_container navbar py-4 px-0 my-6">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +50,7 @@ const Header = () => {
       <div className="navbar-end hidden lg:flex px-0">
         <ul className="menu menu-horizontal pr-0">{headerLink}</ul>
       </div>
-    </div>
+    </header>
   );
 };
 

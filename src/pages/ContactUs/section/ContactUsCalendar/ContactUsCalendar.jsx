@@ -64,7 +64,7 @@ const ContactUsCalendar = () => {
 
   return (
     <section>
-      <article className="w-[94%] max-w-4xl mx-auto my-24  shadow-md py-10 px-2">
+      <article className="w-[94%] max-w-4xl mx-auto my-24 shadow-md py-10 px-2">
         <div className="grid grid-cols-2">
           {/* calender */}
           <div>

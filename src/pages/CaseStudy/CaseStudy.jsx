@@ -1,3 +1,4 @@
+import CallToAction from "../Shared/CallToAction/CallToAction";
 import CaseStudyHero from "./section/CaseStudyHero/CaseStudyHero";
 import CaseStudyMain from "./section/CaseStudyMain/CaseStudyMain";
 
@@ -6,6 +7,7 @@ const CaseStudy = () => {
     <main>
       <CaseStudyHero />
       <CaseStudyMain />
+      <CallToAction />
     </main>
   );
 };

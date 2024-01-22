@@ -1,10 +1,8 @@
 import image from "../../assets/footer-logo.png";
-import CallToAction from "./CallToAction/CallToAction";
 
 const Footer = () => {
   return (
     <>
-      <CallToAction />
       <footer className="bg-[#1A2233] border-t-8 border-[#ff9344]">
         <div className="my_container">
           {/* footer link */}

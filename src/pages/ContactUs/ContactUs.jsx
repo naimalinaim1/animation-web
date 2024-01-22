@@ -1,5 +1,6 @@
 import ContactUsBanner from "./section/ContactUsBanner/ContactUsBanner";
 import ContactUsCalendar from "./section/ContactUsCalendar/ContactUsCalendar";
+import ContactUsDiscuss from "./section/ContactUsDiscuss/ContactUsDiscuss";
 import ContactUsFaq from "./section/ContactUsFaq/ContactUsFaq";
 
 const ContactUs = () => {
@@ -7,6 +8,7 @@ const ContactUs = () => {
     <main>
       <ContactUsBanner />
       <ContactUsCalendar />
+      <ContactUsDiscuss />
       <ContactUsFaq />
     </main>
   );

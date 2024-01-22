@@ -10,6 +10,9 @@ import backIcon from "../../../../assets/basic-icon/back-arrow-icon.svg";
 const ContactUsCalendar = () => {
   const [selectedTime, setSelectedTime] = useState("");
   const [isShowForm, setIsShowForm] = useState(false);
+  const [selectedService, setSelectedService] = useState([]);
+  const [formError, setFormError] = useState("");
+
   /* --------- calendar --------- */
   const [selected, setSelected] = useState(new Date());
   const [lastSelected, setLastSelected] = useState(new Date());
@@ -55,19 +58,68 @@ const ContactUsCalendar = () => {
   };
 
   const userSelectDate = () => {
-    const makeTime = {
-      date: selected,
-      time: selectedTime,
-    };
-    console.log(makeTime);
     setIsShowForm(true);
-    // TODO:
-    // send data server
   };
 
   // backToTimePick
   const backToTimePick = () => {
     setIsShowForm(false);
+    setSelectedService([]);
+  };
+
+  // handle checkbox
+  const handleCheckBox = (addService) => {
+    if (selectedService.includes(addService)) {
+      setSelectedService(
+        selectedService.filter((service) => service !== addService)
+      );
+    } else {
+      setSelectedService([...selectedService, addService]);
+    }
+  };
+
+  // handle form
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const firstName = form.firstName.value;
+    const lastName = form.lastName.value;
+    const email = form.email.value;
+    const phoneNumber = form.phoneNumber.value;
+    const websiteUrl = form.websiteUrl.value;
+    const message = form.message.value;
+
+    // check value
+    if (
+      firstName === "" ||
+      lastName === "" ||
+      email === "" ||
+      phoneNumber === ""
+    ) {
+      setFormError("Input (first name, last name, email, phone) required");
+      return;
+    }
+
+    const data = {
+      meetingTime: {
+        date: selected,
+        time: selectedTime,
+      },
+      userInfo: {
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        websiteUrl,
+        message,
+        serviceLook: selectedService,
+      },
+    };
+
+    // TODO:
+    // send data server
+
+    console.log(data);
   };
 
   return (
@@ -154,7 +206,7 @@ const ContactUsCalendar = () => {
               </p>
               <p>{format(selected, "PP")}</p>
             </div>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               {/* input filed */}
               <div className="space-y-4 text-lg font-medium mx-6">
                 {/* first name */}
@@ -220,17 +272,15 @@ const ContactUsCalendar = () => {
                 {/* Website url */}
                 <label className="form-control w-full">
                   <div className="label">
-                    <span>
-                      Website <span className="text-red-500">*</span>
-                    </span>
+                    <span>Website</span>
                   </div>
                   <input
                     type="url"
                     placeholder="Web URL goes here"
                     id="websiteUrl"
                     className="input border-2 input-warning border-[var(--primary-color)] w-full"
-                    required
                   />
+                  <p className="text-red-500">{formError}</p>
                 </label>
                 {/* checkbox */}
                 <div className="pl-2 space-y-4">
@@ -240,6 +290,9 @@ const ContactUsCalendar = () => {
                   {/* checkbox 1 */}
                   <label className="flex gap-3 items-center">
                     <input
+                      onChange={() =>
+                        handleCheckBox("Animated Explainer Video")
+                      }
                       type="checkbox"
                       className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
                     />
@@ -248,6 +301,9 @@ const ContactUsCalendar = () => {
                   {/* checkbox 2 */}
                   <label className="flex gap-3 items-center">
                     <input
+                      onChange={() =>
+                        handleCheckBox("Animated Promotional Video")
+                      }
                       type="checkbox"
                       className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
                     />
@@ -256,6 +312,7 @@ const ContactUsCalendar = () => {
                   {/* checkbox 3 */}
                   <label className="flex gap-3 items-center">
                     <input
+                      onChange={() => handleCheckBox("Demo/Walkthrough Video")}
                       type="checkbox"
                       className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
                     />
@@ -264,6 +321,9 @@ const ContactUsCalendar = () => {
                   {/* checkbox 4 */}
                   <label className="flex gap-3 items-center">
                     <input
+                      onChange={() =>
+                        handleCheckBox("Feature Showcase Animation")
+                      }
                       type="checkbox"
                       className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
                     />
@@ -272,6 +332,7 @@ const ContactUsCalendar = () => {
                   {/* checkbox 5 */}
                   <label className="flex gap-3 items-center">
                     <input
+                      onChange={() => handleCheckBox("Logo Animation")}
                       type="checkbox"
                       className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
                     />
@@ -280,6 +341,7 @@ const ContactUsCalendar = () => {
                   {/* checkbox 6 */}
                   <label className="flex gap-3 items-center">
                     <input
+                      onChange={() => handleCheckBox("Other")}
                       type="checkbox"
                       className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
                     />
@@ -301,7 +363,7 @@ const ContactUsCalendar = () => {
               {/* submit button */}
               <div className="flex justify-center mt-10">
                 <input
-                  className="bg-[var(--secondary-color)] text-2xl font-medium text-white py-4 px-6 rounded-md"
+                  className="cursor-pointer bg-[var(--secondary-color)] text-2xl font-medium text-white py-4 px-6 rounded-md"
                   type="submit"
                   value="Schedule Now"
                 />

@@ -1,5 +1,5 @@
 import Button from "../../../components/Button";
-import image from "../../../assets/storytellingPowerhouse.gif";
+import image from "../../../assets/hero-img/storytellingPowerhouse.gif";
 
 const CallToAction = () => {
   return (

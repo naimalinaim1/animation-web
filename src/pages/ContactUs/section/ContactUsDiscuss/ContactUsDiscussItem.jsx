@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import checkMark from "../../../../assets/basic-icon/check-mark.svg";
+import checkMark from "../../../../assets/basic-icon/check-mark-icon.svg";
 
 const ContactUsDiscussItem = ({ discussItem }) => {
   return (

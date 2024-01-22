@@ -1,5 +1,5 @@
 import Button from "../../../../components/Button";
-import storytellingPowerhouse from "../../../../assets/storytellingPowerhouse.gif";
+import storytellingPowerhouse from "../../../../assets/hero-img/storytellingPowerhouse.gif";
 const Hero = () => {
   return (
     <section className="mt-16">

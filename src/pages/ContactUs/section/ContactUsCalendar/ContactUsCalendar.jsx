@@ -5,9 +5,11 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "./custom-day-picker.css";
 import TimeButton from "../../../../components/TimeButton";
+import backIcon from "../../../../assets/basic-icon/back-arrow-icon.svg";
 
 const ContactUsCalendar = () => {
   const [selectedTime, setSelectedTime] = useState("");
+  const [isShowForm, setIsShowForm] = useState(false);
   /* --------- calendar --------- */
   const [selected, setSelected] = useState(new Date());
   const [lastSelected, setLastSelected] = useState(new Date());
@@ -58,76 +60,256 @@ const ContactUsCalendar = () => {
       time: selectedTime,
     };
     console.log(makeTime);
+    setIsShowForm(true);
     // TODO:
     // send data server
   };
 
+  // backToTimePick
+  const backToTimePick = () => {
+    setIsShowForm(false);
+  };
+
   return (
     <section>
-      <article className="w-[94%] max-w-4xl mx-auto my-24 shadow-sm py-10 px-2">
-        <div className="grid grid-cols-2">
-          {/* calender */}
-          <div>
-            <p className="pl-16">Pick a Date and Time</p>
-            <DayPicker
-              mode="single"
-              selected={selected}
-              onSelect={setSelected}
-              fromYear={currentDate.getFullYear()}
-              disabled={disabledDays}
-              modifiersClassNames={{
-                selected: "my-selected",
-              }}
-            />
-          </div>
-          {/* time */}
-          <div>
-            <p>
-              Available Starting times for{" "}
-              <span className="font-bold">
-                {selected && format(selected, "PP")}
-              </span>
-            </p>
-            <div className="grid grid-cols-2 mt-4">
-              <div className="flex flex-col items-center space-y-3">
-                <p className="text-xl font-bold text-center">AM</p>
-                {availableTime.am.map((time, index) => (
-                  <TimeButton
-                    selectedTime={selectedTime}
-                    handleButtonClick={handleButtonClick}
-                    key={index}
-                  >
-                    {`${time} AM`}
-                  </TimeButton>
-                ))}
+      <div className="w-[94%] max-w-4xl mx-auto my-24 shadow-sm py-10 px-2">
+        {isShowForm === false ? (
+          // calendar & time
+          <article>
+            <div className="grid grid-cols-2">
+              {/* calender */}
+              <div>
+                <p className="pl-16">Pick a Date and Time</p>
+                <DayPicker
+                  mode="single"
+                  selected={selected}
+                  onSelect={setSelected}
+                  fromYear={currentDate.getFullYear()}
+                  disabled={disabledDays}
+                  modifiersClassNames={{
+                    selected: "my-selected",
+                  }}
+                />
               </div>
-              <div className="flex flex-col items-center space-y-3">
-                <p className="text-xl font-bold text-center">PM</p>
-                {availableTime.pm.map((time, index) => (
-                  <TimeButton
-                    selectedTime={selectedTime}
-                    handleButtonClick={handleButtonClick}
-                    key={index}
-                  >
-                    {`${time} AM`}
-                  </TimeButton>
-                ))}
+              {/* time */}
+              <div>
+                <p>
+                  Available Starting times for{" "}
+                  <span className="font-bold">
+                    {selected && format(selected, "PP")}
+                  </span>
+                </p>
+                <div className="grid grid-cols-2 mt-4">
+                  <div className="flex flex-col items-center space-y-3">
+                    <p className="text-xl font-bold text-center">AM</p>
+                    {availableTime.am.map((time, index) => (
+                      <TimeButton
+                        selectedTime={selectedTime}
+                        handleButtonClick={handleButtonClick}
+                        key={index}
+                      >
+                        {`${time} AM`}
+                      </TimeButton>
+                    ))}
+                  </div>
+                  <div className="flex flex-col items-center space-y-3">
+                    <p className="text-xl font-bold text-center">PM</p>
+                    {availableTime.pm.map((time, index) => (
+                      <TimeButton
+                        selectedTime={selectedTime}
+                        handleButtonClick={handleButtonClick}
+                        key={index}
+                      >
+                        {`${time} AM`}
+                      </TimeButton>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        {/* select button */}
-        <div className="flex justify-center mt-12">
-          <button
-            id="selectDate"
-            disabled={selectedTime === "" ? true : false}
-            onClick={userSelectDate}
-            className="bg-[var(--secondary-color)] text-white py-5 px-12 rounded-md"
-          >
-            Select Date
-          </button>
-        </div>
-      </article>
+            {/* select button */}
+            <div className="flex justify-center mt-12">
+              <button
+                id="selectDate"
+                disabled={selectedTime === "" ? true : false}
+                onClick={userSelectDate}
+                className="bg-[var(--secondary-color)] text-white py-5 px-12 rounded-md"
+              >
+                Select Date
+              </button>
+            </div>
+          </article>
+        ) : (
+          // contact us form
+          <article className="max-w-2xl mx-auto">
+            <div className="flex justify-between items-center text-gray-500 border-b pb-6 mb-8">
+              <p className="flex items-center gap-4">
+                <img
+                  onClick={backToTimePick}
+                  src={backIcon}
+                  className="p-1"
+                  alt="back Icon"
+                />
+                <span>{selectedTime} - 30 Minutes</span>
+              </p>
+              <p>{format(selected, "PP")}</p>
+            </div>
+            <form>
+              {/* input filed */}
+              <div className="space-y-4 text-lg font-medium mx-6">
+                {/* first name */}
+                <label className="form-control w-full">
+                  <div className="label">
+                    <span>
+                      First Name <span className="text-red-500">*</span>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    id="firstName"
+                    className="input border-2 input-warning border-[var(--primary-color)] w-full"
+                    required
+                  />
+                </label>
+                {/* last name */}
+                <label className="form-control w-full">
+                  <div className="label">
+                    <span>
+                      Last Name <span className="text-red-500">*</span>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    id="lastName"
+                    className="input border-2 input-warning border-[var(--primary-color)] w-full"
+                    required
+                  />
+                </label>
+                {/* email */}
+                <label className="form-control w-full">
+                  <div className="label">
+                    <span>
+                      Email <span className="text-red-500">*</span>
+                    </span>
+                  </div>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    id="email"
+                    className="input border-2 input-warning border-[var(--primary-color)] w-full"
+                    required
+                  />
+                </label>
+                {/* phone number */}
+                <label className="form-control w-full">
+                  <div className="label">
+                    <span>
+                      Phone <span className="text-red-500">*</span>
+                    </span>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="Number"
+                    id="phoneNumber"
+                    className="input border-2 input-warning border-[var(--primary-color)] w-full"
+                    required
+                  />
+                </label>
+                {/* Website url */}
+                <label className="form-control w-full">
+                  <div className="label">
+                    <span>
+                      Website <span className="text-red-500">*</span>
+                    </span>
+                  </div>
+                  <input
+                    type="url"
+                    placeholder="Web URL goes here"
+                    id="websiteUrl"
+                    className="input border-2 input-warning border-[var(--primary-color)] w-full"
+                    required
+                  />
+                </label>
+                {/* checkbox */}
+                <div className="pl-2 space-y-4">
+                  <p className="mt-8">
+                    <label>What service you are looking for?</label>
+                  </p>
+                  {/* checkbox 1 */}
+                  <label className="flex gap-3 items-center">
+                    <input
+                      type="checkbox"
+                      className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
+                    />
+                    Animated Explainer Video
+                  </label>
+                  {/* checkbox 2 */}
+                  <label className="flex gap-3 items-center">
+                    <input
+                      type="checkbox"
+                      className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
+                    />
+                    Animated Promotional Video
+                  </label>
+                  {/* checkbox 3 */}
+                  <label className="flex gap-3 items-center">
+                    <input
+                      type="checkbox"
+                      className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
+                    />
+                    Demo/Walkthrough Video
+                  </label>
+                  {/* checkbox 4 */}
+                  <label className="flex gap-3 items-center">
+                    <input
+                      type="checkbox"
+                      className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
+                    />
+                    Feature Showcase Animation
+                  </label>
+                  {/* checkbox 5 */}
+                  <label className="flex gap-3 items-center">
+                    <input
+                      type="checkbox"
+                      className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
+                    />
+                    Logo Animation
+                  </label>
+                  {/* checkbox 6 */}
+                  <label className="flex gap-3 items-center">
+                    <input
+                      type="checkbox"
+                      className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]"
+                    />
+                    Other
+                  </label>
+                </div>
+                {/* message */}
+                <div className="pt-6">
+                  <label>
+                    Do you have questions before the meeting?
+                    <textarea
+                      id="message"
+                      placeholder="Please share anything that will help prepare for our meeting."
+                      className="font-normal input border-2 input-warning border-[var(--primary-color)] w-full h-24 mt-3 py-2"
+                    ></textarea>
+                  </label>
+                </div>
+              </div>
+              {/* submit button */}
+              <div className="flex justify-center mt-10">
+                <input
+                  className="bg-[var(--secondary-color)] text-2xl font-medium text-white py-4 px-6 rounded-md"
+                  type="submit"
+                  value="Schedule Now"
+                />
+              </div>
+            </form>
+          </article>
+        )}
+      </div>
     </section>
   );
 };

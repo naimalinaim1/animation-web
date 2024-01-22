@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import arrow from "../assets/basic-icon/arrow-top.svg";
+import arrow from "../assets/basic-icon/arrow-top-icon.svg";
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);

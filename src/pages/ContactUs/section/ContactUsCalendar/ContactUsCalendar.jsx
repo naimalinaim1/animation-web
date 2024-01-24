@@ -7,11 +7,14 @@ import "./custom-day-picker.css";
 import TimeButton from "../../../../components/TimeButton";
 import backIcon from "../../../../assets/basic-icon/back-arrow-icon.svg";
 
+import Swal from "sweetalert2";
+
 const ContactUsCalendar = () => {
   const [selectedTime, setSelectedTime] = useState("");
   const [isShowForm, setIsShowForm] = useState(false);
   const [selectedService, setSelectedService] = useState([]);
   const [formError, setFormError] = useState("");
+  const [isFormSubmit, setIsFormSubmit] = useState(false);
 
   /* --------- calendar --------- */
   const [selected, setSelected] = useState(new Date());
@@ -118,8 +121,35 @@ const ContactUsCalendar = () => {
 
     // TODO:
     // send data server
-
-    console.log(data);
+    fetch("http://localhost:3000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          setIsFormSubmit(false);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer:
+              '<a href="/contact-us/">Please reload this page. <span class="text-cyan-500">click</span></a>',
+          });
+        } else {
+          Swal.fire({
+            title: "Good job!",
+            text: "Form Submit successfully",
+            icon: "success",
+          });
+          setIsFormSubmit(true);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -191,7 +221,7 @@ const ContactUsCalendar = () => {
               </button>
             </div>
           </article>
-        ) : (
+        ) : isFormSubmit === false ? (
           // contact us form
           <article className="max-w-2xl mx-auto">
             <div className="flex justify-between items-center text-gray-500 border-b pb-6 mb-8">
@@ -369,6 +399,29 @@ const ContactUsCalendar = () => {
                 />
               </div>
             </form>
+          </article>
+        ) : (
+          <article className="max-w-2xl mx-auto text-center">
+            <h3 className="text-3xl font-bold">Reminder</h3>
+            <div className="mt-4 space-x-6">
+              <a
+                className="btn btn-primary"
+                onClick={() =>
+                  window.open("https://calendar.google.com/calendar/u/0/r")
+                }
+              >
+                Google Calendar
+              </a>
+              <a
+                className="btn btn-secondary"
+                target="blank"
+                onClick={() =>
+                  window.open("https://outlook.live.com/calendar/0/view/month")
+                }
+              >
+                Outlook Calendar
+              </a>
+            </div>
           </article>
         )}
       </div>

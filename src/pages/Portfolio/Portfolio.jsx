@@ -12,11 +12,11 @@ const PortfolioWork = lazy(() =>
 const Portfolio = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <main>
+      <div>
         <PortfolioHero />
         <PortfolioWork />
         <CallToAction />
-      </main>
+      </div>
     </Suspense>
   );
 };

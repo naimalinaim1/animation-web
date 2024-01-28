@@ -10,11 +10,11 @@ const ProcessMakeVideo = lazy(() =>
 const Process = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <main>
+      <div>
         <ProcessHero />
         <ProcessMakeVideo />
         <CallToAction />
-      </main>
+      </div>
     </Suspense>
   );
 };

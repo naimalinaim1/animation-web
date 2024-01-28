@@ -11,11 +11,11 @@ const CaseStudyMain = lazy(() =>
 const CaseStudy = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <main>
+      <div>
         <CaseStudyHero />
         <CaseStudyMain />
         <CallToAction />
-      </main>
+      </div>
     </Suspense>
   );
 };

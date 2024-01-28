@@ -14,12 +14,12 @@ const ContactUsFaq = lazy(() => import("./section/ContactUsFaq/ContactUsFaq"));
 const ContactUs = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <main>
+      <div>
         <ContactUsBanner />
         <ContactUsCalendar />
         <ContactUsDiscuss />
         <ContactUsFaq />
-      </main>
+      </div>
     </Suspense>
   );
 };

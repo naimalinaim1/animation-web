@@ -13,11 +13,11 @@ const ContactUsDiscuss = () => {
   ];
 
   return (
-    <section className="w-[94%] max-w-4xl mx-auto my-24 py-10 px-2">
-      <h2 className="title-size font-bold text-center mb-10 px-8">
+    <section className="w-[94%] max-w-4xl mx-auto my-10 md:my-24 py-10 px-2">
+      <h2 className="text-3xl md:text-[36px] font-bold text-center leading-normal mb-10 px-8">
         Below are some points that we will discuss in the meeting.
       </h2>
-      <div className="contact-us-discuss px-20">
+      <div className="contact-us-discuss px-10 md:px-20">
         {discussData.map((discussItem, index) => (
           <ContactUsDiscussItem key={index} discussItem={discussItem} />
         ))}

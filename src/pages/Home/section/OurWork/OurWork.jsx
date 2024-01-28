@@ -5,8 +5,8 @@ import Works from "../../../Shared/Works/Works";
 
 const OurWork = () => {
   return (
-    <section className="my-44 bg-[#FFF9F7] py-20 px-1">
-      <div className="my_container ">
+    <section className="my-20 md:my-44 bg-[#FFF9F7] py-20 px-1">
+      <div className="my_container">
         {/* title */}
         <div className="text-center">
           <MainTitle>Our Works</MainTitle>
@@ -16,7 +16,7 @@ const OurWork = () => {
           </div>
         </div>
         {/* single work */}
-        <div className="mt-24 grid md:grid-cols-2 gap-6 lg:gap-16">
+        <div className="mt-24 grid sm:grid-cols-2 gap-6 lg:gap-16">
           <Works />
         </div>
       </div>

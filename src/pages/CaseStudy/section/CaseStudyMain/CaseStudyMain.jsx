@@ -8,7 +8,7 @@ import reportingDashboard from "../../../../assets/case-study-img/gif/crm-report
 const CaseStudyMain = () => {
   return (
     <section>
-      <div className="my_container my-44">
+      <div className="my_container my-20 md:my-44">
         {/* image */}
         <div>
           <img className="w-full" src={storyBoard} alt="story Board" />
@@ -26,7 +26,7 @@ const CaseStudyMain = () => {
         </div>
 
         {/* animation */}
-        <div className="grid grid-cols-2 border">
+        <div className="grid md:grid-cols-2 border">
           <div className="border-2 border-[#ff9344]">
             <img src={reportingDashboard} alt="reportingDashboard" />
           </div>

@@ -41,7 +41,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="mt-52">
+    <section className="mt-24 md:mt-52">
       <div className="my_container">
         {/* service title */}
         <div className="text-center">

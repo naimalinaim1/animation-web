@@ -7,7 +7,7 @@ const Hero = () => {
         <article className="text-center grid lg:grid-cols-2 gap-4 xl:gap-8 2xl:gap-24 items-center">
           {/* text */}
           <div>
-            <h1 className="text-3xl md:text-left md:text-6xl md:leading-normal lg:text-5xl xl:text-6xl lg:leading-[64px] xl:leading-[80px]  font-bold">
+            <h1 className="text-3xl md:text-left md:text-[3.65rem] md:leading-normal lg:text-[2.80rem] xl:text-[3.55rem] lg:leading-[64px] xl:leading-[80px]  font-bold">
               Bringing your imagination to life, one frame at a time.
             </h1>
             <p className="mt-4 mb-8 leading-relaxed text-lg md:text-justify pr-4">

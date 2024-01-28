@@ -4,13 +4,13 @@ import FaqItems from "../../../Shared/FAQ/FaqItems";
 
 const FaqSection = () => {
   return (
-    <section className="mt-52">
+    <section className="my-24 md:mt-52">
       <div className="my_container">
         {/* title */}
         <div className="text-center">
           <MainTitle>FAQ_</MainTitle>
           <SubTitle>
-            We{"’"}ve already answered some of our commonly asked questions.
+            We{"'"}ve already answered some of our commonly asked questions.
           </SubTitle>
         </div>
         {/* faq_ */}

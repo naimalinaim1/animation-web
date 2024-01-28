@@ -4,7 +4,7 @@ const StepItem = ({ processStep }) => {
   const { stepNo, stepImg, stepName, stepDescription } = processStep;
   return (
     <div className="lg:grid lg:items-center lg:grid-cols-2">
-      <article className={`px-24 ${stepNo % 2 == 0 && "order-last"}`}>
+      <article className={`px-14 md:px-24 py-10 ${stepNo % 2 == 0 && "order-last"}`}>
         <h2 className="text-4xl font-bold">
           {stepNo} {stepName}
         </h2>

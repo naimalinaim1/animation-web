@@ -4,12 +4,12 @@ const CaseStudyHero = () => {
   return (
     <section>
       <div className="my_container">
-        <article className="grid grid-cols-12 items-center mt-16">
+        <article className="grid md:grid-cols-12 items-center mt-16">
           <div className="col-span-7">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl md:leading-normal font-bold">
               Animation Web x Casa Digital Media
             </h2>
-            <div className="text-lg space-y-3 my-6 w-10/12">
+            <div className="text-lg space-y-3 my-6 md:w-10/12">
               <p>
                 Casa Digital Media is a marketing automation software designed
                 specifically for interior designers.

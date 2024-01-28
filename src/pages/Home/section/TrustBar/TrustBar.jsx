@@ -20,7 +20,7 @@ import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 const TrustBar = () => {
   return (
-    <section className="my-52">
+    <section className="mt-24 md:my-52">
       <div className="my_container">
         <div className="text-center">
           <MainTitle>Trusted by 4000+ clients</MainTitle>

@@ -56,7 +56,7 @@ const Discussion = () => {
   ];
 
   return (
-    <section className="my-48">
+    <section className="my-20 md:my-48">
       <div className="my_container">
         {/* title */}
         <div className="text-center">

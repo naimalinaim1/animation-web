@@ -4,7 +4,7 @@ import image from "../../../assets/hero-img/storytellingPowerhouse.gif";
 const CallToAction = () => {
   return (
     <section
-      className="py-16 mt-6"
+      className="py-8 sm:py-12 md:py-16 md:mt-6"
       style={{
         backgroundImage:
           "linear-gradient(180deg,rgba(255,255,255,0.74) 0%,rgba(255,246,235,0.97) 99%)",

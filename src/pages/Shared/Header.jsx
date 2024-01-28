@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className="my_container navbar py-4 px-0 my-6">
-      <div className="navbar-start">
+      <div className="navbar-start w-full lg:w-2/3">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg

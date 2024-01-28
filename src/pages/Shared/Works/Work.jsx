@@ -7,9 +7,9 @@ const Work = ({ work }) => {
       <figure>
         <img src={img} alt="Work" />
       </figure>
-      <div className="py-8 px-2 lg:flex justify-between">
-        <h2 className="text-2xl font-medium">{name}</h2>
-        <p className="text-2xl text-gray-500">{category}</p>
+      <div className="text-center md:text-left sm:text-xl md:text-2xl py-8 px-2 lg:flex justify-between">
+        <h2 className="font-medium">{name}</h2>
+        <p className="text-gray-500">{category}</p>
       </div>
     </div>
   );

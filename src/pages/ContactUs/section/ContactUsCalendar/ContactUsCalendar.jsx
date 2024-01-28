@@ -154,11 +154,11 @@ const ContactUsCalendar = () => {
 
   return (
     <section>
-      <div className="w-[94%] max-w-4xl mx-auto my-24 shadow-sm py-10 px-2">
+      <div className="w-[94%] max-w-4xl mx-auto my-10 md:my-24 shadow-sm py-10 px-2">
         {isShowForm === false ? (
           // calendar & time
           <article>
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2 gap-y-8">
               {/* calender */}
               <div>
                 <p className="pl-16">Pick a Date and Time</p>

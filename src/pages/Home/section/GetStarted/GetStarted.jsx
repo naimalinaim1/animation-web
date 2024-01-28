@@ -31,7 +31,7 @@ const GetStarted = () => {
   ];
 
   return (
-    <section className="my-44">
+    <section className="my-20 md:my-44">
       <div className="my_container">
         {/* title */}
         <div className="text-center">

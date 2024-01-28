@@ -5,7 +5,7 @@ const FaqItem = ({ faqItem }) => {
   return (
     <div className="collapse collapse-plus border shadow-md mb-3">
       <input type="radio" name="my-accordion" />
-      <div className="collapse-title text-lg font-bold">{question}</div>
+      <div className="collapse-title sm:text-lg font-bold">{question}</div>
       <div className="collapse-content text-gray-700">
         {answerList.map((answerItem, index) => (
           <p className="mb-3" key={index}>

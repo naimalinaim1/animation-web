@@ -101,7 +101,7 @@ const Testimonial = () => {
     };
   }, []);
 
-  const slidesPerItem = windowWidth > 1200 ? 3 : windowWidth > 850 ? 2 : 1;
+  const slidesPerItem = windowWidth > 1200 ? 3 : windowWidth > 800 ? 2 : 1;
 
   return (
     <section className="mt-52 bg-[#1A2233] py-20 text-white">

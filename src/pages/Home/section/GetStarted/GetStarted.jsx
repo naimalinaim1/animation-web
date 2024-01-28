@@ -42,9 +42,12 @@ const GetStarted = () => {
           </div>
         </div>
         {/* get started */}
-        <div className="grid grid-cols-3 gap-4 mt-28">
-          {data.map((item) => (
-            <div key={item.id} className="card bg-base-100 shadow-2xl">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-28">
+          {data.map((item, index) => (
+            <div key={item.id}
+            className={`card bg-base-100 shadow-2xl ${
+              index === data.length - 1 ? 'md:col-span-2 lg:col-span-1 max-w-[550px] mx-auto' : ''
+            }`}>
               <div className="indicator-item indicator-start">
                 <span className="bg-[#ff9344] text-white text-3xl font-medium py-4 px-7 rounded-full uppercase inline-block">
                   {item.id}

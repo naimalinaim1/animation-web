@@ -15,7 +15,7 @@ import MainTitle from "../../../../components/MainTitle";
 import SubTitle from "../../../../components/SubTitle";
 import Button from "../../../../components/Button";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Testimonial = () => {
   const [swiper, setSwiper] = useState(null);
@@ -85,6 +85,24 @@ const Testimonial = () => {
     },
   ];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const updateWindowWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    // Add event listener on component mount
+    window.addEventListener('resize', updateWindowWidth);
+
+    // Remove event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
+
+  const slidesPerItem = windowWidth > 1200 ? 3 : windowWidth > 850 ? 2 : 1;
+
   return (
     <section className="mt-52 bg-[#1A2233] py-20 text-white">
       <div className="my_container">
@@ -103,7 +121,7 @@ const Testimonial = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={3}
+            slidesPerView={slidesPerItem}
             coverflowEffect={{
               rotate: 10,
               stretch: 0,

@@ -16,7 +16,7 @@ const FaqSection = () => {
         {/* faq_ */}
         <div className="mt-20">
           {/* faq_ item */}
-          <div className="w-2/3 mx-auto">
+          <div className="md:w-11/12 lg:w-2/3 mx-auto">
             <FaqItems />
           </div>
         </div>

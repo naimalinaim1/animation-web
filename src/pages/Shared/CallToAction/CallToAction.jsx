@@ -11,10 +11,10 @@ const CallToAction = () => {
       }}
     >
       <div className="my_container">
-        <div className="grid grid-cols-12 gap-6 items-center">
+        <div className="grid lg:grid-cols-12 gap-6 items-center">
           {/* first column */}
           <div className="col-span-7 xl:col-span-6">
-            <h1 className="text-6xl font-bold leading-tight animate-text bg-gradient-to-r from-[#1A2233] via-[#FF9243] to-[#FF9243] inline-block text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight animate-text bg-gradient-to-r from-[#1A2233] via-[#FF9243] to-[#FF9243] inline-block text-transparent bg-clip-text">
               Let us tell your story, loud and clear!
             </h1>
             <p className="mt-6 mb-8 text-lg xl:w-3/4">

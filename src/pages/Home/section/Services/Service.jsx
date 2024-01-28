@@ -8,7 +8,7 @@ const Service = ({ service }) => {
         <img src={img} alt="" />
       </div>
       <p className="text-2xl font-medium text-center my-6">{title}</p>
-      <p className="text-lg text-justify">{description}</p>
+      <p className="text-lg text-justify w-[85%] mx-auto md:w-full">{description}</p>
     </div>
   );
 };

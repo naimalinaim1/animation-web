@@ -62,7 +62,7 @@ const Discussion = () => {
         <div className="text-center">
           <MainTitle>Why use animated video content on your website?</MainTitle>
           <SubTitle>
-            <span className="block w-4/5 mx-auto">
+            <span className="block text-lg md:text-2xl md:w-4/5 mx-auto">
               With increased conversions, longer customer retention, and higher
               click-through rates, the real question is why not choose animated
               video content?
@@ -70,7 +70,7 @@ const Discussion = () => {
           </SubTitle>
         </div>
         {/* discussion item */}
-        <div className="w-[95%] mx-auto grid grid-cols-3 gap-8 mt-20">
+        <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-3 lg:gap-8 mt-20">
           {discussionData.map((discussionItem) => (
             <DiscussionItem
               key={discussionItem.id}

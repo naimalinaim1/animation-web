@@ -16,7 +16,7 @@ const OurWork = () => {
           </div>
         </div>
         {/* single work */}
-        <div className="mt-24 grid grid-cols-2 gap-16">
+        <div className="mt-24 grid md:grid-cols-2 gap-6 lg:gap-16">
           <Works />
         </div>
       </div>

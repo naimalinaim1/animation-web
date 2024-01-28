@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .my_container {
-  @apply w-[94%] sm:w-[90%] lg:w-[95%] xl:max-w-[1340px] mx-auto;
+  @apply w-[94%] sm:w-[80%] lg:w-[95%] xl:max-w-[1340px] mx-auto;
 }
 
 :root {

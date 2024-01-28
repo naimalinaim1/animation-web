@@ -1,19 +1,23 @@
 import { Link } from "react-router-dom";
+import ActiveLink from "../../components/ActiveLink";
 
 const Header = () => {
   const headerLink = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <ActiveLink to="/">Home</ActiveLink>
       </li>
       <li>
-        <Link to="/portfolio/">Portfolio</Link>
+        <ActiveLink to="/portfolio/">Portfolio</ActiveLink>
       </li>
       <li>
-        <Link to="/video-process/">Process</Link>
+        <ActiveLink to="/video-process/">Process</ActiveLink>
       </li>
       <li>
-        <Link to="/case-study/">Case Study</Link>
+        <ActiveLink to="/case-study/">Case Study</ActiveLink>
+      </li>
+      <li>
+        <ActiveLink to="/contact-us/">Contact Us</ActiveLink>
       </li>
     </>
   );
@@ -45,10 +49,12 @@ const Header = () => {
             {headerLink}
           </ul>
         </div>
-        <h2 className="primary-color font-bold text-2xl">Animation Web</h2>
+        <Link to="/">
+          <h2 className="primary-color font-bold text-2xl">Animation Web</h2>
+        </Link>
       </div>
       <div className="navbar-end hidden lg:flex px-0">
-        <ul className="menu menu-horizontal pr-0">{headerLink}</ul>
+        <ul className="flex gap-10 font-bold">{headerLink}</ul>
       </div>
     </header>
   );

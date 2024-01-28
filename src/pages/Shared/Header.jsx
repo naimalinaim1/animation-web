@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header className="my_container navbar py-4 px-0 my-6">
-      <div className="navbar-start w-full lg:w-2/3">
+      <div className="navbar-start w-full lg:w-80">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -53,7 +53,7 @@ const Header = () => {
           <h2 className="primary-color font-bold text-2xl">Animation Web</h2>
         </Link>
       </div>
-      <div className="navbar-end hidden lg:flex px-0">
+      <div className="navbar-end lg:w-full hidden lg:flex px-0">
         <ul className="flex gap-10 font-bold">{headerLink}</ul>
       </div>
     </header>

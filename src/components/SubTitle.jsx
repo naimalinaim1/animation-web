@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const SubTitle = ({ children }) => {
-  return <p className="text-2xl mt-2">{children}</p>;
+  return <p className="text-xl sm:text-2xl mt-2">{children}</p>;
 };
 
 SubTitle.propTypes = {

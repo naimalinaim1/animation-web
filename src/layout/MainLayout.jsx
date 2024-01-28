@@ -9,7 +9,7 @@ const MainLayout = () => {
   return (
     <>
       <Header />
-      <main className="md:bg-green-500 lg:bg-white">
+      <main>
         <Outlet />
       </main>
       <Footer />

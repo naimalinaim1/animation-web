@@ -1,16 +1,26 @@
-import ContactUsBanner from "./section/ContactUsBanner/ContactUsBanner";
-import ContactUsCalendar from "./section/ContactUsCalendar/ContactUsCalendar";
-import ContactUsDiscuss from "./section/ContactUsDiscuss/ContactUsDiscuss";
-import ContactUsFaq from "./section/ContactUsFaq/ContactUsFaq";
+import { lazy, Suspense } from "react";
+
+const ContactUsBanner = lazy(() =>
+  import("./section/ContactUsBanner/ContactUsBanner")
+);
+const ContactUsCalendar = lazy(() =>
+  import("./section/ContactUsCalendar/ContactUsCalendar")
+);
+const ContactUsDiscuss = lazy(() =>
+  import("./section/ContactUsDiscuss/ContactUsDiscuss")
+);
+const ContactUsFaq = lazy(() => import("./section/ContactUsFaq/ContactUsFaq"));
 
 const ContactUs = () => {
   return (
-    <main>
-      <ContactUsBanner />
-      <ContactUsCalendar />
-      <ContactUsDiscuss />
-      <ContactUsFaq />
-    </main>
+    <Suspense fallback={<div>Loading...</div>}>
+      <main>
+        <ContactUsBanner />
+        <ContactUsCalendar />
+        <ContactUsDiscuss />
+        <ContactUsFaq />
+      </main>
+    </Suspense>
   );
 };
 

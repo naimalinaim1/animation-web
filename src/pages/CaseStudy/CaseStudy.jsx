@@ -1,14 +1,22 @@
+import { lazy, Suspense } from "react";
+
 import CallToAction from "../Shared/CallToAction/CallToAction";
-import CaseStudyHero from "./section/CaseStudyHero/CaseStudyHero";
-import CaseStudyMain from "./section/CaseStudyMain/CaseStudyMain";
+const CaseStudyHero = lazy(() =>
+  import("./section/CaseStudyHero/CaseStudyHero")
+);
+const CaseStudyMain = lazy(() =>
+  import("./section/CaseStudyMain/CaseStudyMain")
+);
 
 const CaseStudy = () => {
   return (
-    <main>
-      <CaseStudyHero />
-      <CaseStudyMain />
-      <CallToAction />
-    </main>
+    <Suspense fallback={<div>Loading...</div>}>
+      <main>
+        <CaseStudyHero />
+        <CaseStudyMain />
+        <CallToAction />
+      </main>
+    </Suspense>
   );
 };
 

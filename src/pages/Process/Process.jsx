@@ -1,14 +1,21 @@
+import { lazy, Suspense } from "react";
 import CallToAction from "../Shared/CallToAction/CallToAction";
-import ProcessHero from "./ProcessHero/ProcessHero";
-import ProcessMakeVideo from "./ProcessMakeVideo/ProcessMakeVideo";
+
+// Lazy-loaded components
+const ProcessHero = lazy(() => import("./ProcessHero/ProcessHero"));
+const ProcessMakeVideo = lazy(() =>
+  import("./ProcessMakeVideo/ProcessMakeVideo")
+);
 
 const Process = () => {
   return (
-    <main>
-      <ProcessHero />
-      <ProcessMakeVideo />
-      <CallToAction />
-    </main>
+    <Suspense fallback={<div>Loading...</div>}>
+      <main>
+        <ProcessHero />
+        <ProcessMakeVideo />
+        <CallToAction />
+      </main>
+    </Suspense>
   );
 };
 

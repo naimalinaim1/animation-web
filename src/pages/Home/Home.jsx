@@ -1,32 +1,34 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-import Hero from "./section/Hero/Hero";
-import Services from "./section/Services/Services";
-import TrustBar from "./section/TrustBar/TrustBar";
-import OurWork from "./section/OurWork/OurWork";
-import GetStarted from "./section/GetStarted/GetStarted";
-import Testimonial from "./section/Testimonial/Testimonial";
-import Discussion from "./section/Discussion/Discussion";
-import WhyNeedVideo from "./section/WhyNeedVideo/WhyNeedVideo";
-import FaqSection from "./section/FaqSection/FaqSection";
-import Team from "./section/Team/Team";
-import CallToAction from "../Shared/CallToAction/CallToAction";
+import { lazy, Suspense } from "react";
+
+const Hero = lazy(() => import("./section/Hero/Hero"));
+const Services = lazy(() => import("./section/Services/Services"));
+const TrustBar = lazy(() => import("./section/TrustBar/TrustBar"));
+const OurWork = lazy(() => import("./section/OurWork/OurWork"));
+const GetStarted = lazy(() => import("./section/GetStarted/GetStarted"));
+const Testimonial = lazy(() => import("./section/Testimonial/Testimonial"));
+const Discussion = lazy(() => import("./section/Discussion/Discussion"));
+const WhyNeedVideo = lazy(() => import("./section/WhyNeedVideo/WhyNeedVideo"));
+const FaqSection = lazy(() => import("./section/FaqSection/FaqSection"));
+const Team = lazy(() => import("./section/Team/Team"));
+const CallToAction = lazy(() => import("../Shared/CallToAction/CallToAction"));
 
 const Home = () => {
   return (
-    <div>
-      <Hero />
-      <Services />
-      <TrustBar />
-      <OurWork />
-      <GetStarted />
-      <Testimonial />
-      <Discussion />
-      <WhyNeedVideo />
-      <FaqSection />
-      <Team />
-      <CallToAction />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div>
+        <Hero />
+        <Services />
+        <TrustBar />
+        <OurWork />
+        <GetStarted />
+        <Testimonial />
+        <Discussion />
+        <WhyNeedVideo />
+        <FaqSection />
+        <Team />
+        <CallToAction />
+      </div>
+    </Suspense>
   );
 };
 
